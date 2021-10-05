@@ -3,7 +3,9 @@ languageCode = "en-us"
 title = "My new Hugo Site"
 theme = "hello-friend"
 
-[blog.name]
-name = blog
-url = blog
-
+## Main Menu
+[[menu.main]]
+name = "blog"
+weight = 100
+identifier = "blog"
+url = "/blog/"
