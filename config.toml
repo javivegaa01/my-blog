@@ -4,6 +4,6 @@ title = "My new Hugo Site"
 theme = "hello-friend"
 
 [blog.name]
-name = primer_post
-url = primer
+name = blog
+url = blog
 
