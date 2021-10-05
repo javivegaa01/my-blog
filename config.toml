@@ -2,3 +2,8 @@ baseURL = "http://example.org/"
 languageCode = "en-us"
 title = "My new Hugo Site"
 theme = "hello-friend"
+
+[blog]
+name = primer_post
+url = primer
+
