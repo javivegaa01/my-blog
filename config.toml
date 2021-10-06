@@ -2,10 +2,3 @@ baseURL = "http://example.org/"
 languageCode = "en-us"
 title = "My new Hugo Site"
 #theme = ""
-
-## Main Menu
-[[menu.main]]
-name = "blog"
-weight = 100
-identifier = "blog"
-url = "/blog/"
