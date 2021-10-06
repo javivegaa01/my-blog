@@ -1,7 +1,7 @@
 baseURL = "http://example.org/"
 languageCode = "en-us"
 title = "My new Hugo Site"
-theme = "congo"
+#theme = ""
 
 ## Main Menu
 [[menu.main]]
