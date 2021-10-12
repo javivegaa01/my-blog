@@ -2,19 +2,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Series on Spider-Blog</title>
-    <link>http://www.example.com/series/</link>
+    <link>https://my-blog-steel.vercel.app/series/</link>
     <description>Recent content in Series on Spider-Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Mon, 11 Mar 2019 00:00:00 +0000</lastBuildDate><atom:link href="http://www.example.com/series/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Themes Guide</title>
-      <link>http://www.example.com/series/themes-guide/</link>
-      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.example.com/series/themes-guide/</guid>
-      <description></description>
-    </item>
-    
+    <language>en</language><atom:link href="https://my-blog-steel.vercel.app/series/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
