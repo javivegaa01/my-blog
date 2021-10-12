@@ -121,7 +121,7 @@ url = "https://www.linkedin.com/in/johndoe/"
 languageName = ":uk:"
 
 [[languages.en.menu.main]]
-name = "Sobre mí"
+name = "Sobre mi"
 weight = 1
 url = "about/"
 
