@@ -8,6 +8,16 @@
     <language>en</language>
     <lastBuildDate>Tue, 12 Oct 2021 16:22:33 +0200</lastBuildDate><atom:link href="https://my-blog-steel.vercel.app/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Nuevos proyectos</title>
+      <link>https://my-blog-steel.vercel.app/projects/</link>
+      <pubDate>Tue, 12 Oct 2021 18:11:37 +0200</pubDate>
+      
+      <guid>https://my-blog-steel.vercel.app/projects/</guid>
+      <description>En esta parte de mi página se irán añadiendo nuevas configuraciones o tutoriales de instalación.
+!images/nproyectos.gif!</description>
+    </item>
+    
+    <item>
       <title>Servidor Pxe</title>
       <link>https://my-blog-steel.vercel.app/posts/servidor-pxe/</link>
       <pubDate>Tue, 12 Oct 2021 16:22:33 +0200</pubDate>
@@ -34,15 +44,6 @@ Hugo makes use of a variety of open source projects including:
       
       <guid>https://my-blog-steel.vercel.app/contact/</guid>
       <description>Follow me, @johndoe.</description>
-    </item>
-    
-    <item>
-      <title>Nuevos proyectos</title>
-      <link>https://my-blog-steel.vercel.app/projects/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://my-blog-steel.vercel.app/projects/</guid>
-      <description>En esta parte de mi página se irán añadiendo nuevas configuraciones o tutoriales de instalación.</description>
     </item>
     
   </channel>
