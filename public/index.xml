@@ -13,8 +13,7 @@
       <pubDate>Tue, 12 Oct 2021 18:11:37 +0200</pubDate>
       
       <guid>https://my-blog-steel.vercel.app/projects/</guid>
-      <description>En esta parte de mi página se irán añadiendo nuevas configuraciones o tutoriales de instalación.
-{{- $image := resources.Get &amp;ldquo;images/proyectos.gif&amp;rdquo; -}}</description>
+      <description>En esta parte de mi página se irán añadiendo nuevas configuraciones o tutoriales de instalación.</description>
     </item>
     
     <item>
