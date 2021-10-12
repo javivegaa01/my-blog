@@ -121,48 +121,20 @@ url = "https://www.linkedin.com/in/johndoe/"
 languageName = ":uk:"
 
 [[languages.en.menu.main]]
-name = "About"
+name = "Sobre mí"
 weight = 1
 url = "about/"
 
 [[languages.en.menu.main]]
-name = "Blog"
-weight = 2
-url = "posts/"
-
-[[languages.en.menu.main]]
-name = "Projects"
-weight = 3
-url = "projects/"
-
-[[languages.en.menu.main]]
-name = "Contact me"
-weight = 5
-url = "contact/"
-
-[languages.pt-br]
-languageName = ":brazil:"
-title = "João Ninguém"
-
-[languages.pt-br.params]
-author = "João Ninguém"
-info = "Full Stack DevOps e Mágico"
-description = "Sítio pessoal de João Ninguém"
-keywords = "blog,desenvolvedor,pessoal"
-footerContent = "Coloque algum texto aqui."
-
-[[languages.pt-br.menu.main]]
-name = "Sobre mí"
-weight = 1
-url = "Sobre mí/"
-
-[[languages.pt-br.menu.main]]
 name = "Posts"
 weight = 2
 url = "posts/"
 
-[[languages.pt-br.menu.main]]
+[[languages.en.menu.main]]
 name = "Proyectos"
 weight = 3
-url = "proyectos/"
+url = "projects/"
+
+
+
 
