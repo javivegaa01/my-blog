@@ -1,5 +1,0 @@
-+++
-title = "Markdown Syntax Guide"
-
-
-
