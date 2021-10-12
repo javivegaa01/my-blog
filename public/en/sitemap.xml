@@ -3,18 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://my-blog-steel.vercel.app/about/</loc>
+    <lastmod>2021-10-12T20:38:17+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://my-blog-steel.vercel.app/projects/</loc>
     <lastmod>2021-10-12T18:11:37+02:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-br"
-                href="https://my-blog-steel.vercel.app/pt-br/projects/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://my-blog-steel.vercel.app/projects/"
-                />
   </url>
   
   <url>
@@ -43,21 +38,6 @@
   </url>
   
   <url>
-    <loc>https://my-blog-steel.vercel.app/about/</loc>
-    <lastmod>2019-02-28T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-br"
-                href="https://my-blog-steel.vercel.app/pt-br/about/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://my-blog-steel.vercel.app/about/"
-                />
-  </url>
-  
-  <url>
     <loc>https://my-blog-steel.vercel.app/authors/</loc>
     <xhtml:link
                 rel="alternate"
@@ -82,20 +62,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://my-blog-steel.vercel.app/categories/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://my-blog-steel.vercel.app/contact/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt-br"
-                href="https://my-blog-steel.vercel.app/pt-br/contact/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://my-blog-steel.vercel.app/contact/"
                 />
   </url>
   
