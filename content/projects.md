@@ -6,4 +6,4 @@ draft: true
 
 En esta parte de mi página se irán añadiendo nuevas configuraciones o tutoriales de instalación.
 
-![proyectos](/proyectos/nproyectos.gif)
+![proyectos](/proyectos/foto.png)
