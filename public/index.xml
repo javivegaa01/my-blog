@@ -37,12 +37,12 @@ Hugo makes use of a variety of open source projects including:
     </item>
     
     <item>
-      <title>Projects</title>
+      <title>Nuevos proyectos</title>
       <link>https://my-blog-steel.vercel.app/projects/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://my-blog-steel.vercel.app/projects/</guid>
-      <description>Nothing to see here&amp;hellip; Move along!</description>
+      <description>En esta parte de mi página se irán añadiendo nuevas configuraciones o tutoriales de instalación.</description>
     </item>
     
   </channel>

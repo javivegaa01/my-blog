@@ -1,6 +1,8 @@
 +++
-title = "Projects"
+title = "Nuevos proyectos"
 slug = "projects"
 +++
 
-Nothing to see here... Move along!
+En esta parte de mi página se irán añadiendo nuevas configuraciones o tutoriales de instalación.
+
+!images/nproyectos.gif!
