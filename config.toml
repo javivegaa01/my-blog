@@ -152,17 +152,17 @@ keywords = "blog,desenvolvedor,pessoal"
 footerContent = "Coloque algum texto aqui."
 
 [[languages.pt-br.menu.main]]
-name = "Sobre"
+name = "Sobre mí"
 weight = 1
-url = "about/"
+url = "Sobre mí/"
 
 [[languages.pt-br.menu.main]]
-name = "Blog"
+name = "Posts"
 weight = 2
 url = "posts/"
 
 [[languages.pt-br.menu.main]]
-name = "Projetos"
+name = "Proyectos"
 weight = 3
-url = "projects/"
+url = "proyectos/"
 
