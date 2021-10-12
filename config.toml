@@ -1,4 +1,4 @@
-baseURL = "https://my-blog-nine-blue.vercel.app/"
+baseURL = "https://my-blog-steel.vercel.app/"
 title = "Spider-Blog"
 theme = "hugo-coder"
 languageCode = "en"
