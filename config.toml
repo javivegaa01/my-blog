@@ -166,7 +166,3 @@ name = "Projetos"
 weight = 3
 url = "projects/"
 
-[[languages.pt-br.menu.main]]
-name = "Contato"
-weight = 5
-url = "contact/"
