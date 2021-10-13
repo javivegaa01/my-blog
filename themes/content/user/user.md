@@ -5,5 +5,3 @@ draft: true
 ---
 
 ## Hola soy javier vega
-
-soy el cambio
