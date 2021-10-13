@@ -3,17 +3,27 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://my-blog-steel.vercel.app/</loc>
+    <lastmod>2021-10-13T13:09:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://my-blog-steel.vercel.app/user/user/</loc>
+    <lastmod>2021-10-13T13:09:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://my-blog-steel.vercel.app/user/</loc>
+    <lastmod>2021-10-13T13:09:00+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://my-blog-steel.vercel.app/projects/projects/</loc>
     <lastmod>2021-10-12T18:11:37+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://my-blog-steel.vercel.app/projects/</loc>
-    <lastmod>2021-10-12T18:11:37+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://my-blog-steel.vercel.app/</loc>
     <lastmod>2021-10-12T18:11:37+02:00</lastmod>
   </url>
   
