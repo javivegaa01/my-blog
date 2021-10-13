@@ -6,22 +6,22 @@
     <description>Recent content on Spider-Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 12 Oct 2021 16:22:33 +0200</lastBuildDate><atom:link href="https://my-blog-steel.vercel.app/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 12 Oct 2021 20:38:17 +0200</lastBuildDate><atom:link href="https://my-blog-steel.vercel.app/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Sobre mí</title>
-      <link>https://my-blog-steel.vercel.app/about/</link>
+      <link>https://my-blog-steel.vercel.app/about/about/</link>
       <pubDate>Tue, 12 Oct 2021 20:38:17 +0200</pubDate>
       
-      <guid>https://my-blog-steel.vercel.app/about/</guid>
+      <guid>https://my-blog-steel.vercel.app/about/about/</guid>
       <description>Soy javier vega correa    </description>
     </item>
     
     <item>
       <title>Nuevos proyectos</title>
-      <link>https://my-blog-steel.vercel.app/projects/</link>
+      <link>https://my-blog-steel.vercel.app/projects/projects/</link>
       <pubDate>Tue, 12 Oct 2021 18:11:37 +0200</pubDate>
       
-      <guid>https://my-blog-steel.vercel.app/projects/</guid>
+      <guid>https://my-blog-steel.vercel.app/projects/projects/</guid>
       <description>En esta parte de mi página se irán añadiendo nuevas configuraciones o tutoriales de instalación.</description>
     </item>
     
