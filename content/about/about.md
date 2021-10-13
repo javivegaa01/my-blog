@@ -1,6 +1,6 @@
 ---
-title: "Sobre mí"
-date: 2021-10-12T20:38:17+02:00
+title: "About"
+date: 2021-10-13T12:21:07+02:00
 draft: true
 ---
 
