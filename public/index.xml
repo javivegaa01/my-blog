@@ -6,16 +6,7 @@
     <description>Recent content on Spider-Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 13 Oct 2021 13:09:00 +0200</lastBuildDate><atom:link href="https://my-blog-steel.vercel.app/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>User</title>
-      <link>https://my-blog-steel.vercel.app/user/user/</link>
-      <pubDate>Wed, 13 Oct 2021 13:09:00 +0200</pubDate>
-      
-      <guid>https://my-blog-steel.vercel.app/user/user/</guid>
-      <description>Hola soy Javier Vega    </description>
-    </item>
-    
+    <lastBuildDate>Tue, 12 Oct 2021 18:11:37 +0200</lastBuildDate><atom:link href="https://my-blog-steel.vercel.app/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Nuevos proyectos</title>
       <link>https://my-blog-steel.vercel.app/projects/projects/</link>
