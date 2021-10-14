@@ -8,4 +8,3 @@ En esta parte de mi página se irán añadiendo nuevas configuraciones o tutoria
 
 ![proyectos](/images/proyectos/nproyectos.gif/)
 
-Esto es una prueba
