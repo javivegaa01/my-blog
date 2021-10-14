@@ -7,3 +7,5 @@ draft: true
 En esta parte de mi página se irán añadiendo nuevas configuraciones o tutoriales de instalación.
 
 ![proyectos](/images/proyectos/nproyectos.gif/)
+
+Esto es una prueba
