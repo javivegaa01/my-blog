@@ -1,25 +1,25 @@
 ---
-title: "Instalación desatendida"
+title: "Instalación desatendida de Debian 11"
 date: 2021-10-12T16:22:33+02:00
 draft: true
 ---
 
-# *Creación de un sistema automatizado de instalación.*
+# Creación de un sistema automatizado de instalación.
 
-## *Instalación basada en fichero de configuración pressed.*
+## Instalación basada en fichero de configuración pressed.
 
-### *1.Introducción*
+### 1.Introducción
 
 Los desarrolladores de Debian han creado un sistema que permite realizar instalaciones de forma automática o desatendida partiendo de un fichero de configuración (preseed).
 Esta forma de instalación trae una gran ventaja que es un mecanismo para responder a preguntas realizadas durante la instalación sin tener que introducir manualmente las respuestas mientras ésta se ejecuta.
 
-### *2.Pasos para realizar una instalación desatendida correctamente.*
+### 2.Pasos para realizar una instalación desatendida correctamente.
 
-#### *2.1.Descargar la iso.*
+#### 2.1.Descargar la iso.
 
 Desde la página oficial de debian descargamos la última versión de la iso con la arquitectura que deseemos.
 
-#### *2.2.Modificar la iso.*
+#### 2.2.Modificar la iso.
 
 Podemos realizar varios métodos de preconfiguración, en este caso vamos a utilizar la preconfiguración por imagen de arranque.
 Para modificar la iso vamos a crear una carpeta dentro del directorio /mnt debido a que tanto /mnt o /media son los directorios donde se establecen generalmente los puntos de montaje.
@@ -52,7 +52,7 @@ vega@debian:/mnt/iso-preseed$ sudo cp -pr /mnt/iso/isolinux/ isolinux
 vega@debian:/mnt/iso-preseed$ sudo ln -s .debian
 </code></pre>
 
-##### *2.2.1.Creación de archivo preseed*
+##### 2.2.1.Creación de archivo preseed
 
 Ahora pasaremos a crear el archivo de respuestas. Lo creamos en nuestro equipo en la ruta iso-preseed/respuestas con el nombre de preseed.cfg.
 Recordemos que la finalidad de este tipo de instalación es  responder a preguntas realizadas durante la instalación sin tener que introducir manualmente las respuestas y por tanto estas hay que indicarlas en este fichero.
@@ -131,7 +131,7 @@ Password:
 usjiu68uCKNng
 </code></pre>
 
-#### *2.3.Generar la iso*
+#### 2.3.Generar la iso
 
 Ahora vamos a preparar la imagen. Para ello nos desplazaremos hasta la carpeta isolinux que copiamos a iso-preseed en un paso anterior y editamos el archivo txt.cfg para añadirle una nueva línea:
 
@@ -226,30 +226,30 @@ Seleccionamos crear una nueva maquina mediante medio de instalación local.
 
 ![pxe](/images/instalacion_desatendida/maquina1.png/)
 
-!cdrom.png!
+![pxe](/images/instalacion_desatendida/cdrom.png/)
 
 Elegimos la iso que hemos modificado y le ponemos un nombre para identificarla.
 
-!iso.png!
+![pxe](/images/instalacion_desatendida/iso.png/)
 
-!nombre.png!
+![pxe](/images/instalacion_desatendida/nombre.png/)
 
 Como podemos observar aparece un apartado nuevo en el menú de instalación llamado Instalación desatendida preseed Vega, esa es la opción que tenemos que seleccionar.
 
-!opción.png!
+![pxe](/images/instalacion_desatendida/opción.png/)
 
-!inicio.gif!
+![pxe](/images/instalacion_desatendida/inicio.gif/)
 
-!fin1.gif!
+![pxe](/images/instalacion_desatendida/fin1.gif/)
 
-## *Instalación basada en PXE/TFTP*
+## Instalación basada en PXE/TFTP
 
-### *Introducción*
+### Introducción
 
 Preboot eXecution Environment, es un entorno para arrancar e instalar el sistema operativo en computadoras a través de una red, de manera independiente de los dispositivos de almacenamiento de datos disponibles o de los sistemas operativos instalados,pero nos hacen falta dos elementos esenciales, el primero de ellos, un protocolo que nos permita servir los ficheros necesarios para la instalación a la máquina cliente. Ahí es donde entra el juego el protocolo TFTP (Trivial File Transfer Protocol), que es un protocolo de transferencia muy simple semejante a una versión básica de FTP.
 Además del protocolo TFTP, necesitaremos hacer uso de un servidor DHCP que permita asignar direcciones IP dentro de la red a los clientes, ya que es un requisito básico para que los clientes se puedan comunicar con el servidor.
 
-### *Configuración de la máquina que albergará el servidor*
+### Configuración de la máquina que albergará el servidor
 
 <pre><code class="shell">
 # -*- mode: ruby -*-
@@ -279,7 +279,7 @@ Hostname: spxe
 Red: Creamos una interfaz de red privada, que tendrá un direccionamiento estático, ya que se trata del servidor.
 Ram: 1024 GB
 
-### *Instalación y configuración de TFTP y DHCP*
+### Instalación y configuración de TFTP y DHCP
 
 Para tener ambos servicios existe un paquete que nos facilita. dnsmasq
 
@@ -314,7 +314,7 @@ Para cargar la nueva configuración reiniciamos el servicio.
 root@spxe:~# systemctl restart dnsmasq.service 
 </code></pre>
 
-### *Configuración de los ficheros de instalación*
+### Configuración de los ficheros de instalación
 
 Una vez que el servicio dnsmasq está funcionando correctamente, es hora de descargar los ficheros necesarios en /srv/tftp.
 
@@ -369,21 +369,21 @@ iptables -t nat -A POSTROUTING -o eth1 -j SNAT --to-source 192.168.121.30
 
 He creado una máquina para probar el servidor.
 
-!pxe1.png!
+![pxe](/images/instalacion_desatendida/pxe1.png/)
 
 Para que arranque por red, nos dirigimos a Opciones de arranca y priorizamos el arranque por red.
 
-!pxe2.png!
+![pxe](/images/instalacion_desatendida/pxe2.png/)
 
 También conectamos la máquina a la red privada que creamos anteriormente.
 
-!pxe3.png!
+![pxe](/images/instalacion_desatendida/pxe3.png/)
 
 Arranque.
 
 !pxe.gif!
 
-## *Instalación desatendida desde servidor pxe*
+## Instalación desatendida desde servidor pxe
 
 Simplemente habría que colocar el fichero preseed dentro del servidor pxe.
 Con un servidor web (apache2)  instalado, colocaremos el fichero preseed dentro del directorio /var/www/html ya que es el directorio por defecto de apache2.
@@ -438,7 +438,7 @@ auto url = ip del servidor/fichero
  
 !autourl.gif!
 
-## *Bibliografia*
+## Bibliografia
 
 Iso: https://www.debian.org/distrib/index.es.html
 
