@@ -381,7 +381,7 @@ También conectamos la máquina a la red privada que creamos anteriormente.
 
 Arranque.
 
-!pxe.gif!
+![pxe](/images/instalacion_desatendida/pxe.gif/)
 
 ## Instalación desatendida desde servidor pxe
 
@@ -428,7 +428,7 @@ label unattended-gnome
 
 Por tanto el menú de arranque cambiará y nos proporcionará la opción de Instalación desatendida.
 
-!pxe_preseed.gif!
+![pxe](/images/instalacion_desatendida/pxe_preseed.gif/)
 
 Otro modo de arranque , es en el menú presionar esc y se nos abrirá una prompt en el que tendremos que escribir una instrucción de la siguiente forma:
 
@@ -436,7 +436,7 @@ Otro modo de arranque , es en el menú presionar esc y se nos abrirá una prompt
 auto url = ip del servidor/fichero
 </code></pre>
  
-!autourl.gif!
+![pxe](/images/instalacion_desatendida/autourl.gif/)
 
 ## Bibliografia
 
