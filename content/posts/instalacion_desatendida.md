@@ -1,3 +1,9 @@
+---
+title: "Instalación desatendida"
+date: 2021-10-12T16:22:33+02:00
+draft: true
+---
+
 # *Creación de un sistema automatizado de instalación.*
 
 ## *Instalación basada en fichero de configuración pressed.*
