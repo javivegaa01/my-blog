@@ -1,6 +1,5 @@
 ---
 title: "Instalación desatendida de Debian 11"
-draft: true
 ---
 
 # Creación de un sistema automatizado de instalación.
