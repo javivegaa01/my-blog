@@ -1,6 +1,5 @@
 ---
 title: "Instalación desatendida de Debian 11"
-date: 2021-10-12T16:22:33+02:00
 draft: true
 ---
 
