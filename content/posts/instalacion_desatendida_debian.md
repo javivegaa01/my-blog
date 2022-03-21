@@ -1,5 +1,7 @@
 ---
-title: "Instalación desatendida de Debian 11"
+draft: true
+date: 2022-03-21T15:42:09+01:00
+title: "Instalación Desatendida de Debian 11"
 ---
 
 # Creación de un sistema automatizado de instalación.
