@@ -131,9 +131,9 @@ weight = 2
 url = "posts/"
 
 [[languages.en.menu.main]]
-name = "Proyectos"
+name = "Apuntes"
 weight = 3
-url = "projects/"
+url = "apuntes/"
 
 
 
