@@ -6,7 +6,7 @@ draft: true
 
 # **CURSO REDES TCP/IP**
 
-Apuntes del curso redes tcp/ip de OpenWebinars impartido por Alberto Molina.
+Apuntes del curso redes tcp/ip de la plataforma OpenWebinars impartido por el profesor Alberto Molina.
 
 ## **1. Introducción y conceptos previos**
 
