@@ -32,7 +32,7 @@ El encapsulamiento es un proceso que encarga de envolver las capas y que contien
 
 El modelo de capas se traduce en niveles de modelo TCP/IP.
 
-![tcp-ip](/images/proyectos/apuntes/capas-tcp-ip.png/)
+![tcp-ip](/images/apuntes/curso_tcp_ip/capas-tcp-ip.png/)
 
 
 # **2. Direcciones IPv4**
@@ -80,7 +80,7 @@ La notación CIDR utiliza una '/' seguido de un número de bits. En caso del eje
 
 ## **2.4. Esquemas de red**
 
-![tcp-ip](/images/proyectos/apuntes/esquema-de-red.png/)
+![tcp-ip](/images/apuntes/curso_tcp_ip/esquema-de-red.png/)
 
 Unicast: proceso por el cuál se envía un paquete de un host a un host individual.  
 
@@ -115,7 +115,7 @@ Una dirección pública es una dirección que es alcanzable extremo a extremo.
 
 *Ejemplo videoconferencia:*
 
-![tcp-ip](/images/proyectos/apuntes/ejemplo-videoconferencia.png/)
+![tcp-ip](/images/apuntes/curso_tcp_ip/ejemplo-videoconferencia.png/)
 
 *1.Actualmente para que el equipo A el equipo B establezcan una videoconferencia solo tienen que ponerse de acuerdo en que app escoger y la conexión es directa.*
 
@@ -225,7 +225,7 @@ Formas de representar la MAC:
 
 Es un paquete de datos en una red Ethernet. Esquema de una trama ethernet:
 
-![tcp-ip](/images/proyectos/apuntes/trama-ethernet.png/)
+![tcp-ip](/images/apuntes/curso_tcp_ip/trama-ethernet.png/)
 
 * Preamble: 7 octetos de sincronización 10101010 .
 * SFD: Start Frame Delimiter, 1 octeto 10101011 .
@@ -281,7 +281,7 @@ Orden de búsqueda en la tabla:
 
 ## **5.3. Datagrama IPv4**
 
-![tcp-ip](/images/proyectos/apuntes/datagrama-ipv4.png/)
+![tcp-ip](/images/apuntes/curso_tcp_ip/datagrama-ipv4.png/)
 
 Un datagrama ip tiene fundamentalmente dos partes, la cabecera y los datos que vienen del nivel superior.
 
@@ -297,11 +297,11 @@ El protocolo ICMP permite la comunicación de errores y para que los nodos de la
 
 Los mensajes ICMP se transmiten encapsulados en datagramas IP.
 
-![tcp-ip](/images/proyectos/apuntes/icmp.png/)
+![tcp-ip](/images/apuntes/curso_tcp_ip/icmp.png/)
 
 ### **Encapsulamiento**
 
-![tcp-ip](/images/proyectos/apuntes/encapsulamiento.png/)
+![tcp-ip](/images/apuntes/curso_tcp_ip/encapsulamiento.png/)
 
 # **6. Nivel de transporte**
 
@@ -327,7 +327,7 @@ Es un protocolo no orientado a conexión, es decir, no hay un paso previo al env
 
 ### **Cabecera UDP**
 
-![tcp-ip](/images/proyectos/apuntes/cabecera-udp.png/)
+![tcp-ip](/images/apuntes/curso_tcp_ip/cabecera-udp.png/)
 
 *Un ejemplo de uso de UDP es el servicio DNS ya que este proceso petición-respuesta es esencial la velociad.*
 
@@ -341,7 +341,7 @@ Este protocolo es fiable y tiene caracteristica full duplex, es decir, ambos pue
 
 ### **Cabecera TCP**
 
-![tcp-ip](/images/proyectos/apuntes/cabecera-tcp.png/)
+![tcp-ip](/images/apuntes/curso_tcp_ip/cabecera-tcp.png/)
 
 * Puerto orígen y puerto destino
 * Número de secuencia y número de asentimiento que garantizan la fíabilidad de la conexión.
