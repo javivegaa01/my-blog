@@ -106,16 +106,10 @@ weight = 1
 url = "https://github.com/javivegaa01"
 
 [[params.social]]
-name = "Twitter"
-icon = "fa fa-twitter"
-weight = 3
-url = "https://twitter.com/johndoe/"
-
-[[params.social]]
 name = "LinkedIn"
 icon = "fa fa-linkedin"
 weight = 4
-url = "https://www.linkedin.com/in/johndoe/"
+url = "https://www.linkedin.com/in/javier-vega-318200213/"
 
 [languages.en]
 languageName = ":uk:"
