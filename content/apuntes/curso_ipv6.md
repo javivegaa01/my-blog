@@ -3,6 +3,9 @@ title: "Curso IPv6"
 date: 2022-03-21T15:51:20+01:00
 draft: true
 ---
+Apuntes del curso ipv6 de la plataforma OpenWebinars impartido por el profesor Alberto Molina.
+
+Si estas leyendo este post para informarte de IPv6 deberias tener claro como funciona IPv4 te dejo los apuntes de otro curso sobre IPv4 [Curso Redes TCP/IP](curso_tcp_ip.md)
 
 # **1. Introducción**
 
@@ -209,4 +212,146 @@ Configuración equipo subred 0001:
 
 **Nota: No puedo realizar este ejemplo porque mi proovedor de internet no me ofrece direccionamiento IPv6 global.**
 
-# **3. Configuraciones IPv6**
+### **Configuracion estática IPv6 en Windows**
+
+Accedemos a Panel de Control > Redes e Internet > Conexiones de Red > Click derecho Propiedades y seleccionamos el protocolo IPv6.
+
+![ipv6](/images/apuntes/curso_ipv6/conf-estatica-win.png)
+
+### **Configuracion estática IPv6 en Linux**
+
+En linux utilizamos el comando ip.
+
+Con ip -6 a podemos añadir, borrar, vamos a añadir una ip:
+
+<pre><code class="shell">
+ip -6 a add fe80::5054:ff:fea1:6a54/64 dev eth0
+</code></pre>
+
+![ipv6](/images/apuntes/curso_ipv6/ipa1.png)
+
+Para la configuración permanente nos dirigimos a el fichero /etc/network/interfaces definos la configuración estática.
+
+![ipv6](/images/apuntes/curso_ipv6/netin.png)
+
+# **3. ICMPv6 y descubrimiento de vecinos**
+
+## **3.1. ICMPv6**
+
+ICMPv6 es la versión del protocolo ICMP para IPv6. Sus siglas significan Internet Control Message Protocol para IPv6.
+
+Tiene el mismo formato de ICMP pero con más tipos de mensajes:
+
+* Neighbor Discovery
+* Secure Neighbor Discovery
+* Multicast Listener Discovery
+* Multicast Router Discovery 
+
+## **3.2. Descubrimiento de vecinos**
+
+Es el protocolo de descrubrimiento de vecinos o en inglés Network DIscobery es el que sustituye al protocolo ARP de IPv4.
+
+Como ya sabemos en IPv6 no existe Broadcast por tanto a diferencia de ARP no utiliza peticiones Broadcast sino que utiliza peticiones Multicast y ICMPv6.
+
+Usos de Network Discovery:
+
+* Se utiliza para obtener la dirección de un máquina en la red.
+* Se utiliza para obtener los parámetros de la red y así obtener una dirección global.
+* También se utiliza para comprobar que no hay direcciones duplicadas.
+
+Para averiguar la MAC se utilizan dos mecanismos:
+
+* Neighbour Solicitation (NS):
+    * Se envía la petición a la dirección multicast de nodo solicitado. Cuando una máquina levanta su interfaz de red lo que hace es que se agrega a un grupo multicast en los que pone los últimos 3 octetos de la dirección, con esto cada vex que haga una petición a la dirección multicast le va a llegar a la máquina.
+    * En Ethernet se encapsula una trama destinada a la dirección multicast IPv6, esto se hace porque no tendría sentido que existiera broadcast en unos niveles y otros no.
+* Neighbour Advertisement (NA):
+    * Respuesta a NS usando direcciones unicast.
+
+Para obtener los parámetros de la red:
+
+* Se utilizan mensajes multicast con los routers de la red para proporcionar:
+    * Prefijo de direccionamiento global.
+    * Reglas de encaminamiento.
+    * Parámetros de la red.
+    * Servidores DNS.
+* Además de NS y NA existen los mensajes RS (router solicitation), RA (router advertisement) y Redirect
+
+# **4. Configuración de direcciones IPv6.**
+
+## **4.1. SLAAC**
+
+Slaac es un mecanismo cuyas siglas re refieren a Stateless Address Autoconfiguración, como indica su nombre los nodos de red se configuran automáticamente sin que el usuario tenga que realizar ninguna acción. No existe algo equivalente en IPv4.
+
+Funcionamiento:
+
+Al levntar la interfaz de red se configura la ip de enlace local, a través de ella se solicitan los parámetros de la red mediante un mensaje RS (multicast) y el router devuelve los parámetros de la red mediante un mensaje RA. Tras esto el nodo se autoconfigura con los parámetros que le han sido otorgados. Todo este proceso no queda registrado en el router (stateless).
+
+Extensiones RA para DNS
+
+* Las opciones de RA no incluıan inicialmente ́información de DNS. Ahora se incluyen:
+    * RDNSS: Recursive DNS Server
+    * DNSSL: Lista de dominios de búsqueda
+* En los clientes debian hay que instalar rdnssd y
+resolvconf
+
+## **4.2. DHCPv6**
+
+Es denominado Stateful address autoconfiguration protocol, es decir, aquí se queda un registro en el router ya que la máquina no obtiene la dirección IPv6 que quiere sino la que le da el servidor dhcp.
+
+Para su funcionamiento utiliza multicast y mensajas ICMPv6 al no existir broadcast, en DHCPv4 veíamos como el proceso utilizaba la MAC de difusión en este caso como todos los nodos estan el grupo multicast pues se realiza el proceso a través de él.
+
+A diferencia de DHCPv4 los puertos son:
+
+* Servidor: 547/udp.
+* Cliente: 546/udp.
+
+Fases del mecanismo DHCPv6:
+
+* SOLICIT: El cliente envia una peticón al puerto 547/udp, dirección IP multicast FF02::1:2.
+
+* ADVERTISE: El servidor responde al puerto 546/udp y dirección de enlace local del cliente ofrece una dirección global.
+
+* REQUEST: El cliente solicita la concesión de la IPv6 al servidor.
+
+* CONFIRM: El servidor confirma la concesión.
+
+# **5. Mecanismos de transición**
+
+## **5.1. Coexistencia de IPv4 e IPv6**
+
+Es normal que una red utilice ambas pilas (dual-stack). Lo que se plantea como una situación a medio plazo es que aunque poco a poco se incorporan equipos a IPv6, estos equipos sigan necesitando el protocolo IPv4 ya que una parte de Internet IPv4 no va a conectarse a Internet a IPv6.
+
+Nuestro ISP nos debería proporcionar:
+
+* Una IPv4 pública para el router y se configura a la red local con IPv4 privadas utilizando NAT
+
+* Una IPv6 global para el router y un prefijo /48-64 para la red local. De manera que todos los equipos acceden y son accesibles directamente a Internet IPv6.
+
+## **5.2. Mecanismos de transición**
+
+Los utilizamos cuando no disponemos de IPv6 nativo.
+
+Existen diferentes mecanismos, en funcion de:
+
+* Se configura un solo nodo.
+* Se configura una red local.
+* Se dispone de un control sobre el router
+* Se tiene IP pública dinámica o estática.
+
+Un ejemplo de mecanismo de transicón sería que teniendo una conexión nativa exclusiva de IPv6 podamos acceder mediante túneles a equipos en IPv4 y mediante esa conexión podamos acceder de forma indirecta a IPv4.
+
+Lista de mecanismos:
+
+* Stateless IP/ICMP Translation (SIIT)
+* Tunnel Broker (6in4)
+* 6to4
+* 6over4
+* 6rd (IPv6 rapid develoment)
+* ISATAP
+* NAT64
+* 464XLAT
+* Dual-Stack Lite (DS-Lite)
+* Teredo
+
+
+
