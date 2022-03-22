@@ -5,7 +5,7 @@ draft: true
 ---
 Apuntes del curso ipv6 de la plataforma OpenWebinars impartido por el profesor Alberto Molina.
 
-Si estas leyendo este post para informarte de IPv6 deberias tener claro como funciona IPv4 te dejo los apuntes de otro curso sobre IPv4 [Curso Redes TCP/IP](../curso_tcp_ip.md)
+Si estas leyendo este post para informarte de IPv6 deberias tener claro como funciona IPv4 te dejo los apuntes de otro curso sobre IPv4 [Curso Redes TCP/IP](https://blog-privado.vercel.app/apuntes/curso_tcp_ip/)
 
 # **1. Introducción**
 
